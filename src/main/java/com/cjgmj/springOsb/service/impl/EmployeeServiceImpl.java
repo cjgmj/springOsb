@@ -32,4 +32,15 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return employeeDaoImpl.addEmployee(employee);
 	}
 
+	@Override
+	public Employee getByIdEmployee(Long id) {
+		// TODO Auto-generated method stub
+		return employeeDaoImpl.getByIdEmployee(id);
+	}
+
+	@Override
+	public void deleteEmployee(Long id) {
+		employeeDaoImpl.deleteEmployee(id);
+	}
+
 }
