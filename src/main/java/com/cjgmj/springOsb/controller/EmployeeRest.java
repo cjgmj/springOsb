@@ -60,13 +60,13 @@ public class EmployeeRest {
 
 		return jsonEmployee;
 	}
-	
+
 	@RequestMapping(value = "/deleteEmployee/{id}", method = RequestMethod.DELETE, produces = "application/json")
 	public ResponseEntity<Void> deleteEmployee(@PathVariable("id") String id) {
 		employeeServiceImpl.deleteEmployee(new Long(id));
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
-	
+
 	@RequestMapping(value = "/getEmployee/{id}", method = RequestMethod.GET, produces = "application/json")
 	public @ResponseBody Employee getEmployee(@PathVariable("id") String id) {
 		return employeeServiceImpl.getByIdEmployee(new Long(id));
