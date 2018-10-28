@@ -12,35 +12,35 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="task", schema="devsoa")
-public class Task implements Serializable{
+@Table(name = "task", schema = "devsoa")
+public class Task implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 13789171630191052L;
-	
+
 	@Id
-	@Column(name="task_id")
-	@GeneratedValue(strategy=GenerationType.AUTO, generator="sequence")
-	@SequenceGenerator(name="sequence", sequenceName="task_seq")
+	@Column(name = "task_id")
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "sequence")
+	@SequenceGenerator(name = "sequence", sequenceName = "task_seq")
 	private Long id;
 
-	@Column(name="task_name")
+	@Column(name = "task_name")
 	private String name;
-	
-	@Column(name="emp_id")
+
+	@Column(name = "emp_id")
 	private Employee employee;
-	
-	@Column(name="task_dateini")
+
+	@Column(name = "task_dateini")
 	private LocalDateTime data_ini;
-	
-	@Column(name="task_date_end")
+
+	@Column(name = "task_date_end")
 	private LocalDateTime data_end;
-	
-	@Column(name="task_status")
+
+	@Column(name = "task_status")
 	private Long status;
-	
+
 	public Task() {
 	}
 
@@ -101,5 +101,5 @@ public class Task implements Serializable{
 	public void setStatus(Long status) {
 		this.status = status;
 	}
-	
+
 }

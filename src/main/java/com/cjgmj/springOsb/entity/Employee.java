@@ -11,35 +11,35 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="employee", schema="devsoa")
-public class Employee implements Serializable{
+@Table(name = "employee", schema = "devsoa")
+public class Employee implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -4186206915682118864L;
-	
+
 	@Id
-	@Column(name="emp_id")
-	@GeneratedValue(strategy=GenerationType.AUTO, generator="sequence")
-	@SequenceGenerator(name="sequence", sequenceName="emp_seq")
+	@Column(name = "emp_id")
+	@GeneratedValue(strategy = GenerationType.AUTO, generator = "sequence")
+	@SequenceGenerator(name = "sequence", sequenceName = "emp_seq")
 	private Long id;
-	
-	@Column(name="emp_name")
+
+	@Column(name = "emp_name")
 	private String name;
-	
-	@Column(name="emp_alias")
+
+	@Column(name = "emp_alias")
 	private String alias;
-	
-	@Column(name="emp_password")
+
+	@Column(name = "emp_password")
 	private String password;
-	
-	@Column(name="emp_dni")
+
+	@Column(name = "emp_dni")
 	private String dni;
-	
-	@Column(name="emp_email")
+
+	@Column(name = "emp_email")
 	private String email;
-	
+
 	public Employee() {
 	}
 
@@ -100,5 +100,5 @@ public class Employee implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
 }
